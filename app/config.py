@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     - FRONTEND_ORIGIN (optional, defaults to http://localhost:5173)
     """
 
-    GEMINI_API_KEY: str
+
     GROQ_API_KEY: str | None = None
     DATABASE_URL: str = "postgresql+psycopg2://postgres:postgres@localhost:5432/wiki_quiz"
     APP_NAME: str = "Wiki Quiz App"
