@@ -1,0 +1,42 @@
+{
+  "article": {
+    "id": 1,
+    "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+    "title": "Alan Turing",
+    "summary": "Alan Turing was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist.",
+    "sections": {
+      "sections": [
+        { "title": "Early life", "content": "..." },
+        { "title": "Work on computation", "content": "..." }
+      ]
+    },
+    "entities": {
+      "people": ["Alan Turing"],
+      "organizations": ["Bletchley Park"],
+      "locations": ["United Kingdom"]
+    },
+    "created_at": "2024-01-01T00:00:00"
+  },
+  "quiz": {
+    "questions": [
+      {
+        "question": "What field is Alan Turing widely regarded as a founding figure of?",
+        "options": [
+          { "text": "Computer science" },
+          { "text": "Civil engineering" },
+          { "text": "Astrophysics" },
+          { "text": "Medicine" }
+        ],
+        "correct_answer": "Computer science",
+        "explanation": "Turing is often considered the father of theoretical computer science and artificial intelligence.",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  "related_topics": [
+    "Turing machine",
+    "Church–Turing thesis",
+    "Artificial intelligence"
+  ]
+}
+
