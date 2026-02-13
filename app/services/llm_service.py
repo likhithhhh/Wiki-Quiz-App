@@ -74,12 +74,11 @@ def generate_quiz_and_topics(article: ScrapedArticleContent) -> Dict[str, Any]:
     topics_chain = build_related_topics_chain()
 
     common_input = {
-        "title": article.title,
-        "summary": article.summary or "",
-        "sections": article.sections,
-        "entities": article.entities.model_dump(),
-        "text": article.text,
+    "title": article.title,
+    "summary": article.summary or "",
     }
+
+
 
     try:
         quiz_output = quiz_chain.invoke(common_input)
@@ -89,7 +88,7 @@ def generate_quiz_and_topics(article: ScrapedArticleContent) -> Dict[str, Any]:
             f"Gemini API call failed: {exc.message if hasattr(exc, 'message') else str(exc)}"
         ) from exc
     except Exception as exc:  # pragma: no cover
-        raise LLMError(f"Unexpected error while calling Gemini: {exc}") from exc
+        raise LLMError(f"Unexpected error while calling Groq: {exc}") from exc
 
     quiz_json = _safe_json_parse(
         quiz_output.content if hasattr(quiz_output, "content") else str(quiz_output)
