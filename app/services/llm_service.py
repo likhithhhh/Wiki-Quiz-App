@@ -40,7 +40,7 @@ def build_quiz_chain() -> RunnableSerializable:
     template_str = _load_prompt("quiz_prompt.txt")
     prompt = PromptTemplate.from_template(
         template_str
-        + "\n\nARTICLE TITLE:\n{title}\n\nSUMMARY:\n{summary}\n\nSECTIONS:\n{sections}\n\nENTITIES:\n{entities}\n\nFULL TEXT:\n{text}\n"
+        + "\n\nARTICLE TITLE:\n{title}\n\nSUMMARY:\n{summary}\n"
     )
     llm = _build_llm()
     return prompt | llm
@@ -51,7 +51,7 @@ def build_related_topics_chain() -> RunnableSerializable:
     template_str = _load_prompt("related_topics_prompt.txt")
     prompt = PromptTemplate.from_template(
         template_str
-        + "\n\nARTICLE TITLE:\n{title}\n\nSUMMARY:\n{summary}\n\nSECTIONS:\n{sections}\n\nFULL TEXT:\n{text}\n"
+        + "\n\nARTICLE TITLE:\n{title}\n\nSUMMARY:\n{summary}\n"
     )
     llm = _build_llm()
     return prompt | llm
