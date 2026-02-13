@@ -14,7 +14,7 @@ def create_app() -> FastAPI:
     # CORS for frontend
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=[settings.FRONTEND_ORIGIN, "http://localhost:5173", "http://localhost:3000","https://wiki-quiz-app-three.vercel.app/"],
+        allow_origins=["https://wiki-quiz-app-three.vercel.app" ,"http://localhost:5173", "http://localhost:3000"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
